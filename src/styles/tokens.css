@@ -1,0 +1,177 @@
+:root {
+  /* Light Mode Design System HEX mapped to variables */
+  --primary: #063131;
+  --on-primary: #ffffff;
+  --primary-container: #214747;
+  --on-primary-container: #8eb4b4;
+  --primary-fixed: #c2eae9;
+  --primary-fixed-dim: #a6cecd;
+  --on-primary-fixed: #002020;
+  --on-primary-fixed-variant: #274d4d;
+
+  --secondary: #336575;
+  --on-secondary: #ffffff;
+  --secondary-container: #b8eafe;
+  --on-secondary-container: #396b7b;
+  --secondary-fixed: #b8eafe;
+  --secondary-fixed-dim: #9ccee1;
+  --on-secondary-fixed: #001f28;
+  --on-secondary-fixed-variant: #164d5d;
+
+  --tertiary: #003037;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #004851;
+  --on-tertiary-container: #4ebbcd;
+  --tertiary-fixed: #9cefff;
+  --tertiary-fixed-dim: #6cd5e7;
+  --on-tertiary-fixed: #001f24;
+  --on-tertiary-fixed-variant: #004f58;
+
+  --background: #f6faff;
+  --on-background: #0e1d27;
+
+  --surface: #f6faff;
+  --on-surface: #0e1d27;
+  --surface-dim: #ccdcea;
+  --surface-bright: #f6faff;
+  --surface-tint: #3f6565;
+  --surface-variant: #d4e5f2;
+  --on-surface-variant: #414848;
+
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #eaf5ff;
+  --surface-container: #e0f0fe;
+  --surface-container-high: #daeaf8;
+  --surface-container-highest: #d4e5f2;
+
+  --outline: #717978;
+  --outline-variant: #c0c8c7;
+
+  --inverse-surface: #23323c;
+  --inverse-on-surface: #e4f3ff;
+  --inverse-primary: #a6cecd;
+
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+
+  /* Custom Opacity-based variables */
+  --hero-badge-bg: rgba(255, 255, 255, 0.6);
+  --hero-floating-bg: rgba(255, 255, 255, 0.85);
+  --hero-review-bg: rgba(255, 255, 255, 0.9);
+  --navbar-bg-scrolled: rgba(246, 250, 255, 0.85);
+  --navbar-bg-top: rgba(246, 250, 255, 0.5);
+  --booking-card-bg: rgba(255, 255, 255, 1);
+  --booking-input-bg: rgba(255, 255, 255, 0.8);
+  --border-primary-20: rgba(6, 49, 49, 0.2);
+  --border-outline-20: rgba(192, 200, 199, 0.2);
+  --bg-secondary-35: rgba(51, 101, 117, 0.35);
+  --philosophy-bg: #eaf5ff;
+}
+
+.dark {
+  /* Dark Mode Design System values */
+  --primary: #a6cecd;
+  --on-primary: #003737;
+  --primary-container: #214747;
+  --on-primary-container: #c2eae9;
+  --primary-fixed: #c2eae9;
+  --primary-fixed-dim: #a6cecd;
+  --on-primary-fixed: #002020;
+  --on-primary-fixed-variant: #274d4d;
+
+  --secondary: #9ccee1;
+  --on-secondary: #003543;
+  --secondary-container: #164d5d;
+  --on-secondary-container: #b8eafe;
+  --secondary-fixed: #b8eafe;
+  --secondary-fixed-dim: #9ccee1;
+  --on-secondary-fixed: #001f28;
+  --on-secondary-fixed-variant: #164d5d;
+
+  --tertiary: #6cd5e7;
+  --on-tertiary: #00363e;
+  --tertiary-container: #004f58;
+  --on-tertiary-container: #9cefff;
+  --tertiary-fixed: #9cefff;
+  --tertiary-fixed-dim: #6cd5e7;
+  --on-tertiary-fixed: #001f24;
+  --on-tertiary-fixed-variant: #004f58;
+
+  --background: #0e1d27;
+  --on-background: #e2e2e5;
+
+  --surface: #0e1d27;
+  --on-surface: #e2e2e5;
+  --surface-dim: #0b151b;
+  --surface-bright: #1b2631;
+  --surface-tint: #a6cecd;
+  --surface-variant: #414848;
+  --on-surface-variant: #c0c8c7;
+
+  --surface-container-lowest: #0a1116;
+  --surface-container-low: #0c1921;
+  --surface-container: #10212b;
+  --surface-container-high: #142b37;
+  --surface-container-highest: #1b3746;
+
+  --outline: #8a9291;
+  --outline-variant: #414848;
+
+  --inverse-surface: #e2e2e5;
+  --inverse-on-surface: #0e1d27;
+  --inverse-primary: #063131;
+
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  /* Custom Opacity-based variables */
+  --hero-badge-bg: rgba(16, 33, 43, 0.6);
+  --hero-floating-bg: rgba(12, 25, 33, 0.85);
+  --hero-review-bg: rgba(16, 33, 43, 0.9);
+  --navbar-bg-scrolled: rgba(14, 29, 39, 0.85);
+  --navbar-bg-top: rgba(14, 29, 39, 0.5);
+  --booking-card-bg: rgba(20, 43, 55, 0.4);
+  --booking-input-bg: rgba(20, 43, 55, 0.8);
+  --border-primary-20: rgba(166, 206, 205, 0.4);
+  --border-outline-20: rgba(65, 72, 72, 0.2);
+  --bg-secondary-35: rgba(156, 206, 225, 0.35);
+  --philosophy-bg: rgba(16, 33, 43, 0.3);
+}
+
+/* Material symbols utility styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Custom premium visual styles */
+.clinical-glow {
+  box-shadow: 0 10px 40px -10px rgba(33, 71, 71, 0.08);
+}
+.dark .clinical-glow {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-y {
+  animation: float-y 3s ease-in-out infinite;
+}
+
+/* Smooth drag handles and compares */
+.slider-handle {
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+
+.slider-clip {
+  clip-path: inset(0 0 0 50%);
+}

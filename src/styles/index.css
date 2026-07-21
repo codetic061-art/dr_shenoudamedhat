@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-surface text-on-surface transition-colors duration-300;
+  }
+
+  /* Language specific typography stacks */
+  html[lang="ar"] {
+    font-family: 'Cairo', 'Cairo Black', sans-serif;
+  }
+
+  html[lang="en"] {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* Elegant Headings stack */
+  h1, h2, h3, h4, .font-serif-cormorant {
+    font-family: 'Cormorant Garamond', 'Cairo', serif;
+  }
+}
+
+/* Custom logical utility helpers if needed */
+.dir-rtl {
+  direction: rtl;
+}
+
+.dir-ltr {
+  direction: ltr;
+}
+
+/* Morphing and Rotating Liquid Blob Keyframes */
+@keyframes blob-morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 65%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes blob-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-liquid-blob {
+  animation: blob-morph 8s ease-in-out infinite alternate, blob-spin 20s linear infinite;
+}
+

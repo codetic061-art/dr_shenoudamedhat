@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dr. Shenouda | Modern Dentistry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#4ebbcd",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#23323c",
+                      "secondary-container": "#b8eafe",
+                      "surface": "#f6faff",
+                      "surface-tint": "#3f6565",
+                      "surface-bright": "#f6faff",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#c2eae9",
+                      "on-primary-fixed-variant": "#274d4d",
+                      "on-secondary-container": "#396b7b",
+                      "on-surface": "#0e1d27",
+                      "secondary-fixed-dim": "#9ccee1",
+                      "surface-container-highest": "#d4e5f2",
+                      "on-background": "#0e1d27",
+                      "on-surface-variant": "#414848",
+                      "on-secondary-fixed": "#001f28",
+                      "primary-container": "#214747",
+                      "on-tertiary-fixed": "#001f24",
+                      "outline-variant": "#c0c8c7",
+                      "on-primary-container": "#8eb4b4",
+                      "surface-dim": "#ccdcea",
+                      "surface-container-low": "#eaf5ff",
+                      "surface-container-high": "#daeaf8",
+                      "on-primary-fixed": "#002020",
+                      "tertiary-fixed-dim": "#6cd5e7",
+                      "outline": "#717978",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e0f0fe",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#d4e5f2",
+                      "inverse-primary": "#a6cecd",
+                      "on-secondary-fixed-variant": "#164d5d",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#b8eafe",
+                      "primary": "#063131",
+                      "tertiary": "#003037",
+                      "on-tertiary-fixed-variant": "#004f58",
+                      "secondary": "#336575",
+                      "background": "#f6faff",
+                      "tertiary-fixed": "#9cefff",
+                      "inverse-on-surface": "#e4f3ff",
+                      "tertiary-container": "#004851",
+                      "primary-fixed-dim": "#a6cecd",
+                      "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "container-max": "1280px",
+                      "margin-desktop": "80px",
+                      "gutter": "32px",
+                      "section-gap": "120px",
+                      "stack-lg": "24px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": [
+                              "Cormorant Garamond"
+                      ],
+                      "label-ar": [
+                              "Cairo"
+                      ],
+                      "body-md": [
+                              "DM Sans"
+                      ],
+                      "headline-lg": [
+                              "Cormorant Garamond"
+                      ],
+                      "display-lg": [
+                              "Cormorant Garamond"
+                      ],
+                      "headline-xl": [
+                              "Cormorant Garamond"
+                      ],
+                      "cta": [
+                              "DM Sans"
+                      ],
+                      "body-lg": [
+                              "DM Sans"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-ar": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "cta": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clinical-glow {
+            box-shadow: 0 10px 40px -10px rgba(33, 71, 71, 0.05);
+        }
+        @keyframes float-y {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float-y {
+            animation: float-y 2s ease-in-out infinite;
+        }
+        /* Slider styles */
+        .slider-handle {
+            cursor: ew-resize;
+            touch-action: pan-y;
+        }
+        .slider-clip {
+            clip-path: inset(0 0 0 50%);
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/20 shadow-sm transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<!-- Logo -->
+<a class="flex items-center gap-2 group hover:scale-105 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined text-primary text-[32px] group-hover:rotate-12 transition-transform duration-300">dentistry</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">Dr. Shenouda</span>
+</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md tracking-wide uppercase text-primary font-bold border-b-2 border-primary pb-1 hover:scale-105 transition-transform duration-300" href="#services">Services</a>
+<a class="font-body-md text-body-md tracking-wide uppercase text-secondary hover:text-primary hover:scale-105 transition-all duration-300" href="#about">About</a>
+<a class="font-body-md text-body-md tracking-wide uppercase text-secondary hover:text-primary hover:scale-105 transition-all duration-300" href="#work">Work</a>
+<a class="font-body-md text-body-md tracking-wide uppercase text-secondary hover:text-primary hover:scale-105 transition-all duration-300" href="#reviews">Reviews</a>
+<a class="font-body-md text-body-md tracking-wide uppercase text-secondary hover:text-primary hover:scale-105 transition-all duration-300" href="#faq">FAQ</a>
+</div>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<!-- Lang Toggle -->
+<button class="relative flex items-center justify-center p-1 bg-surface-container-highest rounded-full border border-white/50 backdrop-blur-md hover:scale-105 transition-all duration-300 group">
+<span class="px-3 py-1 text-xs font-bold text-primary rounded-full bg-white shadow-sm z-10 transition-colors">EN</span>
+<span class="px-3 py-1 text-xs font-bold text-secondary-fixed-dim font-label-ar group-hover:text-primary transition-colors">عربي</span>
+</button>
+<a class="bg-primary-container text-on-primary font-cta text-cta uppercase px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105 hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-md" href="#book">
+<span>Book Appointment</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-[100px]">
+<!-- Hero Section -->
+<section class="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap min-h-[921px] flex items-center">
+<!-- Background Decorative Elements -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-surface-container-high/50 to-transparent -z-10 rounded-l-[100px] blur-3xl opacity-50"></div>
+<div class="absolute bottom-20 left-10 w-[300px] h-[300px] bg-secondary-container/30 rounded-full blur-[100px] -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center relative z-10 w-full">
+<!-- Left Content -->
+<div class="flex flex-col items-start gap-stack-lg z-20">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-md border border-white rounded-full clinical-glow">
+<span class="material-symbols-outlined text-primary text-[16px]">stars</span>
+<span class="font-body-md text-sm font-medium text-primary">Trusted by 500+ Patients</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight max-w-[600px]">
+                        Modern Dentistry with <span class="italic text-secondary">Comfort</span> You Deserve
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[500px]">
+                        Experience expert dental care with a gentle touch. State-of-the-art technology tailored for a healthier, brighter smile.
+                    </p>
+<div class="flex flex-wrap items-center gap-4 mt-4">
+<a class="bg-primary-container text-on-primary font-cta text-cta uppercase px-8 py-4 rounded-full flex items-center gap-2 hover:scale-105 hover:bg-primary transition-all duration-300 shadow-md" href="#book">
+<span>Book an Appointment</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+<button class="flex items-center gap-3 px-6 py-4 rounded-full border-[1.5px] border-outline-variant hover:border-primary-container text-primary font-cta text-cta uppercase transition-all duration-300 hover:scale-[1.02]">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</div>
+                            Watch Video
+                        </button>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 pt-8 border-t border-outline-variant/30 w-full" id="stats-container">
+<div>
+<p class="font-headline-lg text-headline-lg font-bold text-primary"><span class="stat-number" data-target="12">0</span>+</p>
+<p class="font-body-md text-sm text-on-surface-variant">Years Exp.</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg font-bold text-primary"><span class="stat-number" data-target="5">0</span>k+</p>
+<p class="font-body-md text-sm text-on-surface-variant">Happy Patients</p>
+</div>
+<div>
+<div class="flex items-center gap-1 text-primary">
+<p class="font-headline-lg text-headline-lg font-bold"><span class="stat-number" data-target="4.9">0.0</span></p>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant">Google Rating</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg font-bold text-primary"><span class="stat-number" data-target="99">0</span>%</p>
+<p class="font-body-md text-sm text-on-surface-variant">Satisfaction</p>
+</div>
+</div>
+</div>
+<!-- Right Image Area -->
+<div class="relative w-full h-[600px] mt-12 lg:mt-0 lg:ml-10">
+<!-- Main Image Mask -->
+<div class="absolute inset-0 rounded-[40px] overflow-hidden bg-surface-container shadow-xl">
+<img alt="A young woman with a perfect white smile sitting comfortably in a modern dental chair, looking relaxed and happy. The lighting is bright and clinical but warm, reflecting a high-end luxury dental clinic environment." class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" data-alt="A young woman with a perfect white smile sitting comfortably in a modern dental chair, looking relaxed and happy. The lighting is bright and clinical but warm, reflecting a high-end luxury dental clinic environment. The color palette is composed of crisp whites and subtle teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQXo0VCDL620fGDXOCRjf-RLxlGwkyf64P5SPn4XZyrWNBVFCp4CCWouh1ohiwd__JllTIiB14A2BtqU8sY5G888mT0UjOEIjHIs271leQOg2P8fowy6wWogQrCOqm1J5r4R-MsmK0apnrMfyqp-dXpZO0Pu4T0HQrGyvllMjwIra0K_Pwj06mw3Vv_JMiyrygRXFSpxS9keYYnXOYiVVs5PQ6D62At0LS5BM4RxqIU0iCshJQWofHgX-GxPL2eHealMPUKhcLWzt3"/>
+</div>
+<!-- Floating Glassmorphism Cards -->
+<!-- Floating Pill List -->
+<div class="absolute top-10 -right-6 md:-right-12 flex flex-col gap-3 z-30">
+<div class="bg-white/80 backdrop-blur-xl border border-white shadow-lg rounded-full px-5 py-3 flex items-center gap-3 animate-[bounce_4s_infinite]">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">health_and_safety</span>
+</div>
+<span class="font-body-md text-sm font-medium text-on-surface">Pain-Free Experience</span>
+</div>
+<div class="bg-white/80 backdrop-blur-xl border border-white shadow-lg rounded-full px-5 py-3 flex items-center gap-3 animate-[bounce_5s_infinite_100ms]">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+</div>
+<span class="font-body-md text-sm font-medium text-on-surface">Advanced Tech</span>
+</div>
+<div class="bg-white/80 backdrop-blur-xl border border-white shadow-lg rounded-full px-5 py-3 flex items-center gap-3 animate-[bounce_4.5s_infinite_200ms]">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]">clean_hands</span>
+</div>
+<span class="font-body-md text-sm font-medium text-on-surface">Strict Hygiene</span>
+</div>
+</div>
+<!-- Reviews Floating Card -->
+<div class="absolute -bottom-8 md:-left-12 left-4 bg-white/90 backdrop-blur-2xl border border-white shadow-2xl rounded-2xl p-5 flex items-center gap-4 z-30 clinical-glow transform hover:-translate-y-2 transition-transform duration-300">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="A small circular portrait photo of a smiling person, used as an avatar in a user interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7aVLIOvcnJlVJnhAcR2x58U7ZvY8PEjm_Tl__k1HdExbe5WLuPfRc3AMEBi0J5u3J_H-2FHWIeC6YT7W3ihf-1EGrw3oKGv0tjjYZHDFxRH9MgqUR-ir6k93eQAze_QKsqeaqUbQed5Vp4AaxIeeMJxjwwbfrtFX5GS1Bq8zYsHsDrEFmaJuryQHYtLcJPSIBbM5C-NBjiM69WOdw1EzyBUxZjlZ61fdeZcp8LmcmCK77rCHesXmq57usk_hiz7fuAugFRUKy5Jeu"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="A small circular portrait photo of a smiling man, used as an avatar in a user interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuNZ3imf2rGBOXfqxyIpEzAPclZdu_XWkdNOkA2yvkom6Gr0yw0kcNTSuhrHydA4m0SYpKdfhObjvaKMhvgo5npTyAPf0qFsc9Z91pyBwBiGBcPmq9AKUx7Dl0MyyYJHCI9-ZGoTDuKZFd-AW0csyqT7sncQVoLwglgPGXvZSG9YJS48L3PpvvCNLWF7hVhcuYcmR3suAA2k7mnTpQGsByeExQlw-ylIVKUsw5ZClyLPs3B3xWA8WLr3XwhmzthzNZ4dZfenqBTAsq"/>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary-container text-white flex items-center justify-center text-xs font-bold">+</div>
+</div>
+<div>
+<div class="flex items-center gap-1 text-primary mb-1">
+<span class="font-bold text-lg">4.9</span>
+<div class="flex text-yellow-400 text-sm">★★★★★</div>
+</div>
+<p class="text-xs text-on-surface-variant font-medium">(520 Reviews)</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Added to satisfy request) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap" id="services">
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-headline-xl text-primary mb-4">Our Services</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Comprehensive dental care tailored to your needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card -->
+<div class="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-transparent hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">implants</span>
+<h3 class="font-headline-lg text-xl font-bold text-primary mb-2">Dental Implants</h3>
+<p class="text-on-surface-variant text-sm">Restore your smile with our premium implant solutions.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-transparent hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">orthopedics</span>
+<h3 class="font-headline-lg text-xl font-bold text-primary mb-2">Orthodontics</h3>
+<p class="text-on-surface-variant text-sm">Straighten your teeth with modern, invisible aligners.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-transparent hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">medical_services</span>
+<h3 class="font-headline-lg text-xl font-bold text-primary mb-2">General Dentistry</h3>
+<p class="text-on-surface-variant text-sm">Routine checkups and cleanings for a healthy mouth.</p>
+</div>
+</div>
+</section>
+<!-- Before/After Section (Added to satisfy request) -->
+<section class="bg-surface-container-low py-section-gap" id="work">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-headline-xl text-primary mb-4">Transformations</h2>
+</div>
+<div class="relative w-full max-w-3xl mx-auto h-[400px] rounded-2xl overflow-hidden shadow-xl" id="ba-slider">
+<!-- Before Image (Background) -->
+<div class="absolute inset-0 bg-surface-container-highest flex items-center justify-center">
+<span class="text-on-surface-variant font-bold text-2xl">Before Image Placeholder</span>
+<span class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-sm z-10">Before</span>
+</div>
+<!-- After Image (Foreground, Clipped) -->
+<div class="absolute inset-0 bg-primary-container flex items-center justify-center slider-clip" id="ba-after">
+<span class="text-white font-bold text-2xl">After Image Placeholder</span>
+<span class="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded text-sm z-10">After</span>
+</div>
+<!-- Handle -->
+<div class="absolute top-0 bottom-0 left-1/2 w-1 bg-white cursor-ew-resize slider-handle -ml-0.5 flex items-center justify-center z-20" id="ba-handle">
+<div class="w-8 h-8 bg-white rounded-full shadow flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">swap_horiz</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section (Added to satisfy request) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap" id="faq">
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-headline-xl text-primary mb-4">Frequently Asked Questions</h2>
+</div>
+<div class="max-w-2xl mx-auto flex flex-col gap-4">
+<!-- FAQ Item -->
+<div class="bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<button class="w-full px-6 py-4 flex justify-between items-center text-left focus:outline-none faq-toggle">
+<span class="font-bold text-primary">How often should I visit the dentist?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 faq-icon">expand_more</span>
+</button>
+<div class="px-6 pb-4 hidden faq-content">
+<p class="text-on-surface-variant text-sm">We recommend visiting the dentist at least twice a year for routine checkups and professional cleanings.</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<button class="w-full px-6 py-4 flex justify-between items-center text-left focus:outline-none faq-toggle">
+<span class="font-bold text-primary">Do you offer pain-free treatments?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 faq-icon">expand_more</span>
+</button>
+<div class="px-6 pb-4 hidden faq-content">
+<p class="text-on-surface-variant text-sm">Yes, we use the latest technology and anesthesia to ensure a comfortable and pain-free experience.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-highest dark:bg-surface-dim px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<a class="font-headline-xl text-headline-xl text-primary font-bold mb-4 block" href="#">Dr. Shenouda</a>
+<p class="text-on-surface-variant max-w-sm mb-6 font-body-md text-sm">
+                    Delivering personalized dental treatments with modern technology and gentle care ensuring healthy confident smiles for every patient.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-primary font-bold font-body-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all font-body-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all font-body-md" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all font-body-md" href="#">Terms</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-sm text-on-surface-variant">© 2024 Dr. Shenouda Dental Clinic. Precision in Every Smile.</p>
+</div>
+</footer>
+<!-- Floating WhatsApp -->
+<a class="fixed bottom-8 right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 z-50 animate-float-y hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)]" href="https://wa.me/1234567890" target="_blank">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path>
+</svg>
+</a>
+<script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md', 'bg-surface/90', 'backdrop-blur-xl', 'border-b', 'border-white/20');
+                nav.classList.remove('shadow-sm', 'bg-surface/60');
+            } else {
+                nav.classList.remove('shadow-md', 'bg-surface/90');
+                nav.classList.add('shadow-sm', 'bg-surface/60', 'backdrop-blur-xl', 'border-b', 'border-white/20');
+            }
+        });
+
+        // Count-up Stats Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const stats = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseFloat(entry.target.getAttribute('data-target'));
+                        let current = 0;
+                        const inc = target / 50;
+                        const updateCount = () => {
+                            current += inc;
+                            if (current < target) {
+                                entry.target.innerText = current % 1 !== 0 ? current.toFixed(1) : Math.ceil(current);
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                entry.target.innerText = target;
+                            }
+                        };
+                        updateCount();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            stats.forEach(stat => observer.observe(stat));
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('.faq-icon');
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+
+        // Before/After Slider
+        const slider = document.getElementById('ba-slider');
+        if (slider) {
+            const handle = document.getElementById('ba-handle');
+            const afterImg = document.getElementById('ba-after');
+            let isDragging = false;
+
+            const updateSlider = (e) => {
+                if (!isDragging) return;
+                const rect = slider.getBoundingClientRect();
+                let x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+                x = Math.max(0, Math.min(x, rect.width));
+                const percent = (x / rect.width) * 100;
+                handle.style.left = `${percent}%`;
+                afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
+            };
+
+            handle.addEventListener('mousedown', () => isDragging = true);
+            handle.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('mousemove', updateSlider);
+            window.addEventListener('touchmove', updateSlider);
+        }
+    </script>
+</body></html>
