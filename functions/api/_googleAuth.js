@@ -37,7 +37,7 @@ export async function getGoogleAccessToken(clientEmail, privateKey) {
     "pkcs8",
     binaryDer,
     {
-      name: "RSASHA256",
+      name: "RSASSA-PKCS1-v1_5",
       hash: { name: "SHA-256" }
     },
     false,
@@ -60,7 +60,7 @@ export async function getGoogleAccessToken(clientEmail, privateKey) {
 
   const enc = new TextEncoder();
   const signature = await crypto.subtle.sign(
-    "RSASHA256",
+    "RSASSA-PKCS1-v1_5",
     signingKey,
     enc.encode(message)
   );
