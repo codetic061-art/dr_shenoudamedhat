@@ -61,7 +61,7 @@ export const Navbar = () => {
               dentistry
             </span>
             <span className="font-headline-lg text-2xl font-bold text-primary tracking-tight">
-              {lang === 'ar' ? 'د. شنودة' : 'Dr. Shenouda'}
+              {lang === 'ar' ? 'د. شنودة مدحت' : 'Dr. Shenouda Medhat'}
             </span>
           </a>
 
@@ -192,7 +192,7 @@ export const Navbar = () => {
                 dentistry
               </span>
               <span className="font-headline-lg text-xl font-bold text-primary">
-                {lang === 'ar' ? 'د. شنودة' : 'Dr. Shenouda'}
+                {lang === 'ar' ? 'د. شنودة مدحت' : 'Dr. Shenouda Medhat'}
               </span>
             </div>
             

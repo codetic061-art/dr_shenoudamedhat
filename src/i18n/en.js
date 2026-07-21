@@ -25,9 +25,9 @@ export default {
   },
 
   about: {
-    h2: "About Dr. Shenouda",
+    h2: "About Dr. Shenouda Medhat",
     sub: "Dentist & Oral Health Specialist | Alexandria, Egypt",
-    imgAlt: "Dr. Shenouda, cosmetic dentist",
+    imgAlt: "Dr. Shenouda Medhat, cosmetic dentist",
     badges: {
       experience: "2+ Years Exp.",
       patients: "500+ Patients",
@@ -37,9 +37,9 @@ export default {
 
   philosophy: {
     quote: "“Dentistry for me is not merely a practice of treatment, but a synthesis of scientific precision and cosmetic artistry to restore confidence and smiles for every patient.”",
-    name: "Dr. Shenouda",
+    name: "Dr. Shenouda Medhat",
     specialty: "Oral & Dental Surgeon | Alexandria University Graduate with Honors",
-    imgAlt: "Dr. Shenouda — specialist cosmetic dentist",
+    imgAlt: "Dr. Shenouda Medhat — specialist cosmetic dentist",
   },
 
   services: {
@@ -144,7 +144,7 @@ export default {
     },
     // Booking page (/book) — see specs/002-appointment-booking/contracts/ui-contracts.md
     pageTitle: "Book an Appointment",
-    metaDescription: "Schedule your appointment with Dr. Shenouda Dental Clinic on Saturdays or Wednesdays at 4:00 PM.",
+    metaDescription: "Schedule your appointment with Dr. Shenouda Medhat Dental Clinic on Saturdays or Wednesdays at 4:00 PM.",
     backToHome: "Back to Home",
     selectSlotLabel: "Select an appointment time",
     saturday: "Saturday",
