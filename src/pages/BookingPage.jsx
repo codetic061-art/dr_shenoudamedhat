@@ -32,11 +32,28 @@ const toISODate = (d) => {
  * @returns {Array<object>}
  */
 const deriveAvailability = (rawSlots, bookings, externalBookedDates) => {
-  const bookedSet = new Set((bookings || []).map((b) => b.slotDate));
+  const bookedSet = new Set();
+  
+  // Local bookings
+  (bookings || []).forEach((b) => {
+    bookedSet.add(`${b.slotDate}T${b.slotTime}`);
+  });
+
+  // External booked slots
   if (externalBookedDates) {
     externalBookedDates.forEach((d) => bookedSet.add(d));
   }
-  return rawSlots.map((s) => ({ ...s, isBooked: bookedSet.has(toISODate(s.date)) }));
+
+  return rawSlots.map((s) => {
+    const dateStr = toISODate(s.date); // YYYY-MM-DD
+    const slotHour = String(s.date.getHours()).padStart(2, '0');
+    const slotMin = String(s.date.getMinutes()).padStart(2, '0');
+    const slotKey = `${dateStr}T${slotHour}:${slotMin}`; // YYYY-MM-DDT16:00
+    
+    // Booked if specific time is blocked OR the whole day is blocked
+    const isBooked = bookedSet.has(slotKey) || bookedSet.has(dateStr);
+    return { ...s, isBooked };
+  });
 };
 
 /**
@@ -92,10 +109,14 @@ export default function BookingPage() {
     setBookingStatus('submitting');
     setLastError(null);
 
+    const slotHour = String(selectedSlot.date.getHours()).padStart(2, '0');
+    const slotMin = String(selectedSlot.date.getMinutes()).padStart(2, '0');
+    const formattedTime = `${slotHour}:${slotMin}`;
+
     const booking = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       slotDate: toISODate(selectedSlot.date),
-      slotTime: '16:00',
+      slotTime: formattedTime,
       patientName: formData.patientName,
       patientPhone: formData.patientPhone,
       patientEmail: formData.patientEmail,
@@ -110,6 +131,7 @@ export default function BookingPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           slotDate: booking.slotDate,
+          slotTime: booking.slotTime,
           patientName: booking.patientName,
           patientPhone: booking.patientPhone,
           patientEmail: booking.patientEmail,
@@ -132,9 +154,14 @@ export default function BookingPage() {
       const newBookings = [...bookings, booking];
       setBookings(newBookings);
       setSlots((prev) =>
-        prev.map((s) =>
-          toISODate(s.date) === booking.slotDate ? { ...s, isBooked: true } : s
-        )
+        prev.map((s) => {
+          const sHour = String(s.date.getHours()).padStart(2, '0');
+          const sMin = String(s.date.getMinutes()).padStart(2, '0');
+          const sTime = `${sHour}:${sMin}`;
+          return (toISODate(s.date) === booking.slotDate && sTime === booking.slotTime) 
+            ? { ...s, isBooked: true } 
+            : s;
+        })
       );
       setSelectedSlot(null); // <-- clears the highlight so the slot visibly becomes "booked"
       setLastBooking(booking);

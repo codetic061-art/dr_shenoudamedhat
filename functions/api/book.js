@@ -15,11 +15,11 @@ export async function onRequestPost(context) {
 
     // 1. Parse request body
     const body = await context.request.json();
-    const { slotDate, patientName, patientPhone, patientEmail, lang } = body;
+    const { slotDate, slotTime, patientName, patientPhone, patientEmail, lang } = body;
 
-    if (!slotDate || !patientName || !patientPhone || !patientEmail) {
+    if (!slotDate || !slotTime || !patientName || !patientPhone || !patientEmail) {
       return new Response(
-        JSON.stringify({ error: "Missing required booking details (date, name, phone, email)." }),
+        JSON.stringify({ error: "Missing required booking details (date, time, name, phone, email)." }),
         { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
@@ -28,18 +28,22 @@ export async function onRequestPost(context) {
     const accessToken = await getGoogleAccessToken(clientEmail, privateKey);
 
     // 3. Create Google Calendar Event
-    // Slot time is always 16:00 (4:00 PM) in Egypt (Africa/Cairo timezone)
+    // Parse slotTime (HH:MM) to set end time (+1 hour)
+    const [hours, minutes] = slotTime.split(':').map(Number);
+    const endHours = String(hours + 1).padStart(2, '0');
+    const formattedEndTime = `${endHours}:${String(minutes).padStart(2, '0')}:00`;
+
     const event = {
       summary: lang === 'ar' 
         ? `حجز موعد أسنان: ${patientName}` 
         : `Dental Booking: ${patientName}`,
       description: `Name: ${patientName}\nPhone: ${patientPhone}\nEmail: ${patientEmail}\nLanguage: ${lang || 'ar'}`,
       start: {
-        dateTime: `${slotDate}T16:00:00`,
+        dateTime: `${slotDate}T${slotTime}:00`,
         timeZone: 'Africa/Cairo'
       },
       end: {
-        dateTime: `${slotDate}T17:00:00`,
+        dateTime: `${slotDate}T${formattedEndTime}`,
         timeZone: 'Africa/Cairo'
       },
       reminders: {

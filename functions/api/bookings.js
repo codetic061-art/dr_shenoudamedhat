@@ -50,16 +50,25 @@ export async function onRequestGet(context) {
 
     const data = await response.json();
 
-    // 3. Extract booked dates in YYYY-MM-DD format
+    // 3. Extract booked date-times (YYYY-MM-DDT[hour]:[minute]) or dates (YYYY-MM-DD)
     const bookedDates = [];
     if (data.items) {
       for (const event of data.items) {
-        if (event.start && (event.start.dateTime || event.start.date)) {
-          const startStr = event.start.dateTime || event.start.date;
-          // Extract the local YYYY-MM-DD part from the ISO string
-          const dateOnly = startStr.split('T')[0];
-          if (dateOnly && !bookedDates.includes(dateOnly)) {
-            bookedDates.push(dateOnly);
+        if (event.start) {
+          if (event.start.dateTime) {
+            const startStr = event.start.dateTime; // e.g. "2026-07-25T16:00:00+03:00"
+            const match = startStr.match(/^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2})/);
+            if (match) {
+              const key = match[1]; // "2026-07-25T16:00"
+              if (!bookedDates.includes(key)) {
+                bookedDates.push(key);
+              }
+            }
+          } else if (event.start.date) {
+            const dateOnly = event.start.date; // "2026-07-25"
+            if (!bookedDates.includes(dateOnly)) {
+              bookedDates.push(dateOnly);
+            }
           }
         }
       }

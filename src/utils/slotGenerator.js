@@ -35,22 +35,27 @@ export function generateSlots() {
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
   for (let d = 0; d <= weeks * 7; d++) {
-    const candidate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d, 16, 0, 0, 0);
-    const dow = candidate.getDay();
+    const candidateDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d);
+    const dow = candidateDay.getDay();
 
     if (dow !== 3 && dow !== 6) continue;
 
-    // Skip any slot whose full datetime is already in the past
-    if (candidate.getTime() <= now.getTime()) continue;
+    // Generate hourly slots from 4:00 PM (16:00) to 10:00 PM (22:00) inclusive
+    for (let h = 16; h <= 22; h++) {
+      const candidate = new Date(candidateDay.getFullYear(), candidateDay.getMonth(), candidateDay.getDate(), h, 0, 0, 0);
 
-    slots.push({
-      id: candidate.toISOString(),
-      date: candidate,
-      dayOfWeek: dow === 6 ? 'saturday' : 'wednesday',
-      formattedDate: formatDisplayDate(candidate),
-      formattedTime: formatTime(candidate),
-      isBooked: false,
-    });
+      // Skip any slot whose full datetime is already in the past
+      if (candidate.getTime() <= now.getTime()) continue;
+
+      slots.push({
+        id: candidate.toISOString(),
+        date: candidate,
+        dayOfWeek: dow === 6 ? 'saturday' : 'wednesday',
+        formattedDate: formatDisplayDate(candidate),
+        formattedTime: formatTime(candidate),
+        isBooked: false,
+      });
+    }
   }
 
   slots.sort((a, b) => a.date.getTime() - b.date.getTime());
