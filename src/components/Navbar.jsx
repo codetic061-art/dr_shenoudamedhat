@@ -127,11 +127,7 @@ export const Navbar = () => {
             {/* Booking Button */}
             <a
               id="nav-booking-cta"
-              href="#book"
-              onClick={(e) => {
-                e.preventDefault();
-                handleLinkClick('book');
-              }}
+              href="/book"
               className="bg-primary-container text-on-primary font-cta text-xs uppercase px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105 hover:bg-primary transition-all duration-300 shadow-sm"
             >
               <span>{t.nav.book}</span>
@@ -219,11 +215,7 @@ export const Navbar = () => {
 
           <div className="flex flex-col gap-4 mt-auto pb-8">
             <a
-              href="#book"
-              onClick={(e) => {
-                e.preventDefault();
-                handleLinkClick('book');
-              }}
+              href="/book"
               className="bg-primary text-on-primary font-cta text-sm uppercase py-4 rounded-full flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-transform duration-300"
             >
               <span>{t.nav.book}</span>

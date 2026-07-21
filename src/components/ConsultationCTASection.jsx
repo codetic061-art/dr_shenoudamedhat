@@ -44,8 +44,7 @@ export const ConsultationCTASection = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
             {/* Primary CTA (Links to Booking) */}
             <a
-              href="#book"
-              onClick={handleScrollToBook}
+              href="/book"
               className="bg-white text-[#0e1d27] font-cta text-cta uppercase px-8 py-4 rounded-full flex items-center gap-2 hover:scale-103 hover:bg-slate-100 transition-all duration-300 shadow-md font-bold"
             >
               <span>{t.cta.btn1}</span>

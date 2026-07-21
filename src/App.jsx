@@ -10,7 +10,6 @@ import { ServicesSection } from './components/ServicesSection';
 import { BeforeAfterSection } from './components/BeforeAfterSection';
 import { ReviewsSection } from './components/ReviewsSection';
 import { ConsultationCTASection } from './components/ConsultationCTASection';
-import { BookingSection } from './components/BookingSection';
 import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 import { WhatsAppFloat } from './components/WhatsAppFloat';
@@ -31,7 +30,6 @@ function LandingPage() {
         <BeforeAfterSection />
         <ReviewsSection />
         <ConsultationCTASection />
-        <BookingSection />
         <FAQSection />
       </main>
 

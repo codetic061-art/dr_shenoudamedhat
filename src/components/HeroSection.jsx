@@ -97,11 +97,7 @@ export const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4 mt-2">
             <a
-              href="#book"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScrollTo('book');
-              }}
+              href="/book"
               className="bg-primary text-on-primary font-cta text-cta uppercase px-8 py-4 rounded-full flex items-center gap-2 hover:scale-103 hover:bg-primary-container transition-all duration-300 shadow-md hover:shadow-lg"
             >
               <span>{t.hero.cta1}</span>
