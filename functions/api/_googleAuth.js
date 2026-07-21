@@ -25,13 +25,11 @@ function base64url(source) {
  * @returns {Promise<string>} Access token
  */
 export async function getGoogleAccessToken(clientEmail, privateKey) {
-  // Clean the PEM key format
-  const pemHeader = "-----BEGIN PRIVATE KEY-----";
-  const pemFooter = "-----END PRIVATE KEY-----";
+  // Clean the PEM key format by stripping headers, footers, and any non-base64 characters
   const pemContents = privateKey
-    .replace(pemHeader, "")
-    .replace(pemFooter, "")
-    .replace(/\s/g, "");
+    .replace(/-----BEGIN[^-]*-----/g, "")
+    .replace(/-----END[^-]*-----/g, "")
+    .replace(/[^A-Za-z0-9+/=]/g, "");
 
   const binaryDer = base64ToArrayBuffer(pemContents);
 
