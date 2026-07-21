@@ -42,16 +42,13 @@ export async function onRequestPost(context) {
         dateTime: `${slotDate}T17:00:00`,
         timeZone: 'Africa/Cairo'
       },
-      attendees: [
-        { email: patientEmail }
-      ],
       reminders: {
         useDefault: true
       }
     };
 
-    // Google Calendar API insert endpoint with sendUpdates=all to notify attendees
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?sendUpdates=all`;
+    // Google Calendar API insert endpoint
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events`;
 
     const response = await fetch(url, {
       method: 'POST',
