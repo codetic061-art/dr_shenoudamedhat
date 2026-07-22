@@ -21,8 +21,10 @@ export const PhilosophySection = () => {
           {/* Circular Doctor Avatar */}
           <div className="w-[100px] h-[100px] rounded-full overflow-hidden border-4 border-[var(--border-primary-20)] bg-surface shadow-md">
             <img
-              src="/about me.png"
+              src="/about me.webp"
               alt={t.philosophy.imgAlt}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top select-none"
             />
           </div>

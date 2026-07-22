@@ -165,8 +165,10 @@ export const AboutSection = () => {
             <div className="absolute w-[92%] h-[92%] bg-gradient-to-tr from-[#00E5B4] via-[#00A0DC] to-[#0032B4] opacity-85 animate-liquid-blob" />
 
             <img
-              src="/about me.png"
+              src="/about me.webp"
               alt={t.about.imgAlt}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top select-none group-hover:scale-103 transition-transform duration-700 relative z-10"
             />
             {/* Soft clinical blur overlay */}

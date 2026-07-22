@@ -71,75 +71,75 @@
 }
 
 .dark {
-  /* Dark Mode Design System values */
-  --primary: #a6cecd;
-  --on-primary: #003737;
-  --primary-container: #214747;
-  --on-primary-container: #c2eae9;
-  --primary-fixed: #c2eae9;
-  --primary-fixed-dim: #a6cecd;
-  --on-primary-fixed: #002020;
-  --on-primary-fixed-variant: #274d4d;
+  /* Dark Mode Design System values - Luxury Clinical Teal & Dark Navy */
+  --primary: #14b8a6;
+  --on-primary: #042f2c;
+  --primary-container: #0f766e;
+  --on-primary-container: #ccfbf1;
+  --primary-fixed: #99f6e4;
+  --primary-fixed-dim: #5eead4;
+  --on-primary-fixed: #042f2c;
+  --on-primary-fixed-variant: #115e59;
 
-  --secondary: #9ccee1;
-  --on-secondary: #003543;
-  --secondary-container: #164d5d;
-  --on-secondary-container: #b8eafe;
-  --secondary-fixed: #b8eafe;
-  --secondary-fixed-dim: #9ccee1;
-  --on-secondary-fixed: #001f28;
-  --on-secondary-fixed-variant: #164d5d;
+  --secondary: #38bdf8;
+  --on-secondary: #082f49;
+  --secondary-container: #0369a1;
+  --on-secondary-container: #e0f2fe;
+  --secondary-fixed: #bae6fd;
+  --secondary-fixed-dim: #7dd3fc;
+  --on-secondary-fixed: #082f49;
+  --on-secondary-fixed-variant: #0284c7;
 
-  --tertiary: #6cd5e7;
-  --on-tertiary: #00363e;
-  --tertiary-container: #004f58;
-  --on-tertiary-container: #9cefff;
-  --tertiary-fixed: #9cefff;
-  --tertiary-fixed-dim: #6cd5e7;
-  --on-tertiary-fixed: #001f24;
-  --on-tertiary-fixed-variant: #004f58;
+  --tertiary: #2dd4bf;
+  --on-tertiary: #042f2c;
+  --tertiary-container: #134e4a;
+  --on-tertiary-container: #99f6e4;
+  --tertiary-fixed: #99f6e4;
+  --tertiary-fixed-dim: #5eead4;
+  --on-tertiary-fixed: #042f2c;
+  --on-tertiary-fixed-variant: #0f766e;
 
-  --background: #0e1d27;
-  --on-background: #e2e2e5;
+  --background: #070e17;
+  --on-background: #f1f5f9;
 
-  --surface: #0e1d27;
-  --on-surface: #e2e2e5;
-  --surface-dim: #0b151b;
-  --surface-bright: #1b2631;
-  --surface-tint: #a6cecd;
-  --surface-variant: #414848;
-  --on-surface-variant: #c0c8c7;
+  --surface: #070e17;
+  --on-surface: #f1f5f9;
+  --surface-dim: #050a11;
+  --surface-bright: #132030;
+  --surface-tint: #14b8a6;
+  --surface-variant: #1e293b;
+  --on-surface-variant: #94a3b8;
 
-  --surface-container-lowest: #0a1116;
-  --surface-container-low: #0c1921;
-  --surface-container: #10212b;
-  --surface-container-high: #142b37;
-  --surface-container-highest: #1b3746;
+  --surface-container-lowest: #050a10;
+  --surface-container-low: #0c1622;
+  --surface-container: #111d2e;
+  --surface-container-high: #17263c;
+  --surface-container-highest: #1f314c;
 
-  --outline: #8a9291;
-  --outline-variant: #414848;
+  --outline: #475569;
+  --outline-variant: #334155;
 
-  --inverse-surface: #e2e2e5;
-  --inverse-on-surface: #0e1d27;
+  --inverse-surface: #f1f5f9;
+  --inverse-on-surface: #070e17;
   --inverse-primary: #063131;
 
-  --error: #ffb4ab;
-  --on-error: #690005;
-  --error-container: #93000a;
-  --on-error-container: #ffdad6;
+  --error: #f87171;
+  --on-error: #450a0a;
+  --error-container: #991b1b;
+  --on-error-container: #fef2f2;
 
   /* Custom Opacity-based variables */
-  --hero-badge-bg: rgba(16, 33, 43, 0.6);
-  --hero-floating-bg: rgba(12, 25, 33, 0.85);
-  --hero-review-bg: rgba(16, 33, 43, 0.9);
-  --navbar-bg-scrolled: rgba(14, 29, 39, 0.85);
-  --navbar-bg-top: rgba(14, 29, 39, 0.5);
-  --booking-card-bg: rgba(20, 43, 55, 0.4);
-  --booking-input-bg: rgba(20, 43, 55, 0.8);
-  --border-primary-20: rgba(166, 206, 205, 0.4);
-  --border-outline-20: rgba(65, 72, 72, 0.2);
-  --bg-secondary-35: rgba(156, 206, 225, 0.35);
-  --philosophy-bg: rgba(16, 33, 43, 0.3);
+  --hero-badge-bg: rgba(17, 29, 46, 0.65);
+  --hero-floating-bg: rgba(12, 22, 34, 0.85);
+  --hero-review-bg: rgba(17, 29, 46, 0.9);
+  --navbar-bg-scrolled: rgba(7, 14, 23, 0.88);
+  --navbar-bg-top: rgba(7, 14, 23, 0.5);
+  --booking-card-bg: rgba(17, 29, 46, 0.75);
+  --booking-input-bg: rgba(12, 22, 34, 0.9);
+  --border-primary-20: rgba(20, 184, 166, 0.25);
+  --border-outline-20: rgba(255, 255, 255, 0.08);
+  --bg-secondary-35: rgba(56, 189, 248, 0.2);
+  --philosophy-bg: rgba(17, 29, 46, 0.5);
 }
 
 /* Material symbols utility styling */

@@ -137,6 +137,8 @@ export const BeforeAfterSection = () => {
               <img
                 src={activeCase.afterImage}
                 alt={caseTranslation.afterAlt}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center pointer-events-none select-none"
               />
               <span className={`absolute top-4 ${lang === 'ar' ? 'left-4' : 'right-4'} bg-primary-container/80 backdrop-blur-md text-white text-[10px] font-bold tracking-wider px-3.5 py-1.5 rounded-full z-10 uppercase`}>
@@ -156,6 +158,8 @@ export const BeforeAfterSection = () => {
               <img
                 src={activeCase.beforeImage}
                 alt={caseTranslation.beforeAlt}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center pointer-events-none select-none"
               />
               <span className={`absolute top-4 ${lang === 'ar' ? 'right-4' : 'left-4'} bg-black/60 backdrop-blur-md text-white text-[10px] font-bold tracking-wider px-3.5 py-1.5 rounded-full z-10 uppercase`}>

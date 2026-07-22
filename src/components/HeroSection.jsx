@@ -170,8 +170,10 @@ export const HeroSection = () => {
           {/* Main Photo Mask with Glassmorphic Frame */}
           <div className="absolute inset-0 rounded-[40px] overflow-hidden bg-surface-container shadow-2xl border-4 border-white/20 dark:border-white/5 z-10">
             <img
-              src="/hero photo.png"
+              src="/hero photo.webp"
               alt={t.hero.imgAlt}
+              fetchpriority="high"
+              decoding="async"
               className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 select-none"
             />
           </div>
@@ -218,13 +220,13 @@ export const HeroSection = () => {
           >
             <div className="flex -space-x-3 space-x-reverse">
               <div className="w-9 h-9 rounded-full border-2 border-white dark:border-surface overflow-hidden shadow-sm select-none">
-                <img src="/patient_1.png" alt="Patient 1" className="w-full h-full object-cover" />
+                <img src="/patient_1.webp" alt="Patient 1" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
               <div className="w-9 h-9 rounded-full border-2 border-white dark:border-surface overflow-hidden shadow-sm select-none">
-                <img src="/patient_2.png" alt="Patient 2" className="w-full h-full object-cover" />
+                <img src="/patient_2.webp" alt="Patient 2" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
               <div className="w-9 h-9 rounded-full border-2 border-white dark:border-surface overflow-hidden shadow-sm select-none">
-                <img src="/patient_3.png" alt="Patient 3" className="w-full h-full object-cover" />
+                <img src="/patient_3.webp" alt="Patient 3" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
               <div className="w-9 h-9 rounded-full border-2 border-white dark:border-surface bg-primary-container text-white flex items-center justify-center text-xs font-bold shadow-sm select-none">
                 +
